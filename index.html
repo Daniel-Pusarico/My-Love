@@ -75,14 +75,20 @@
         /* 📱 Ajuste para móviles */
 @media (max-width: 600px) {
   html, body {
+    margin:0;
+    padding:0;
     width: 100vw;                      /* Asegura que no se extienda más allá del viewport */
+    max-width:100%;
     overflow-x: hidden;               /* Elimina cualquier desplazamiento horizontal */
   }
   body {
     background-attachment: scroll;         /* Evita el efecto fijo que falla en móviles */
     background-size: cover;                /* Recorta la imagen para llenar la pantalla */
-    background-position: center top;       /* Enfoca la parte superior de la imagen */
+    background-position: top center;       /* Enfoca la parte superior de la imagen */
     background-repeat: no-repeat;          /* Evita que se repita si no llena el espacio */
+  }
+  * {
+    box-sizing: border-box;          /* Evita que paddings/márgenes rompan el layout */
   }
 }
 
